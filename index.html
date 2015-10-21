@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TreeMultiselectDemo </title>
+	<meta HTTP-EQUIV="content-type" CONTENT="text/html; charset=UTF-8">
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="css/jquery.tree-multiselect.min.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tree-multiselect.custom.js"></script>
+</head>
+<script type="text/javascript">
+$(document).ready(function(){
+	//默认
+	//$("select#demo").treeMultiselect();
+	
+	// 设置已设置权限的拖动项
+	var opts={sortable:true};
+	$("select#demo").treeMultiselect(opts);
+});
+</script>
+<body>
+	<select id="demo" multiple="multiple">
+	  <option value="new1" data-index="1" data-section="功能管理">新功能</option>
+	  <option value="new2" data-index="2" data-section="功能管理">旧功能</option>
+	  <option value="add" data-section="管理权限" data-index="1">增加</option>
+	  <option value="delete" data-section="管理权限" data-index="2" data-description="这里是简要介绍">删除</option>
+	  <option value="update" data-section="管理权限" data-index="3">修改</option>
+	  <option value="query" data-section="管理权限" data-index="4" data-description="这里是简要介绍">查询</option>
+	</select>
+</body>
+</html>
